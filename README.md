@@ -90,13 +90,28 @@ A RESTful API for creating, retrieving, updating, and deleting notes. Built to p
 
 7. Open `http://localhost:3000` to check that the server is running.
 
-### What I Learned
+### Learning Outcomes
 
-- Structuring an Express application using routes, controllers, and models
-- Building RESTful CRUD endpoints
-- Using Mongoose to interact with MongoDB
-- Handling asynchronous operations with `async/await`
-- Using HTTP status codes and error handling
-- Managing environment variables and development scripts
+- Understood REST API fundamentals and HTTP methods.
+- Implemented CRUD operations using Express.js.
+- Organized backend code using routes, controllers, and models.
+- Used Mongoose to create, retrieve, update, and delete MongoDB documents.
+- Practiced asynchronous operations using `async/await`.
+- Handled errors using `try/catch` and appropriate HTTP status codes.
+- Used environment variables with dotenv to manage configuration.
+- Tested API endpoints locally and debugged module imports and routing issues.
+
+### Future Improvements
+
+The current version focuses on basic CRUD functionality. Possible future upgrades include:
+
+- **Search and Filtering:** Search notes by title and filter notes based on specific criteria.
+- **Pagination and Sorting:** Support large collections by returning notes in pages and sorting them.
+- **Authentication and Authorization:** Allow users to register, log in, and manage only their own notes.
+- **Improved Validation:** Add stricter input validation and consistent error responses.
+- **Additional Features:** Add categories, tags, or note pinning.
+- **Deployment:** Deploy the API and connect it to a hosted MongoDB database.
+
+These are potential future extensions and are not part of the current implementation.
 
 **Status:** Completed — local CRUD operations implemented and tested.
