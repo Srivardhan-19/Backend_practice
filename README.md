@@ -47,71 +47,83 @@ A RESTful API for creating, retrieving, updating, and deleting notes. Built to p
 - Delete a note
 - Validate required fields
 - Handle missing notes and invalid IDs
-- Store notes in MongoDB with creation and update timestamps
+- Automatically maintain creation and update timestamps
 
 ### API Endpoints
 
 | Method | Endpoint | Description |
 |---|---|---|
 | POST | `/api/notes` | Create a note |
-| GET | `/api/notes` | Get all notes |
-| GET | `/api/notes/:id` | Get a note by ID |
+| GET | `/api/notes` | Retrieve all notes |
+| GET | `/api/notes/:id` | Retrieve a note by ID |
 | PUT | `/api/notes/:id` | Update a note |
 | DELETE | `/api/notes/:id` | Delete a note |
-
-### Local Setup
-
-1. Install [Node.js](https://nodejs.org/).
-2. Install and start MongoDB locally.
-3. Navigate to the project directory:
-
-   ```bash
-   cd notes-api
-   ```
-
-4. Install dependencies:
-
-   ```bash
-   npm install
-   ```
-
-5. Create a `.env` file:
-
-   ```env
-   PORT=3000
-   MONGO_URI=mongodb://127.0.0.1:27017/notes_db
-   ```
-
-6. Start the development server:
-
-   ```bash
-   npm run dev
-   ```
-
-7. Open `http://localhost:3000` to check that the server is running.
 
 ### Learning Outcomes
 
 - Understood REST API fundamentals and HTTP methods.
 - Implemented CRUD operations using Express.js.
 - Organized backend code using routes, controllers, and models.
-- Used Mongoose to create, retrieve, update, and delete MongoDB documents.
+- Used Mongoose to interact with MongoDB.
 - Practiced asynchronous operations using `async/await`.
-- Handled errors using `try/catch` and appropriate HTTP status codes.
-- Used environment variables with dotenv to manage configuration.
-- Tested API endpoints locally and debugged module imports and routing issues.
+- Implemented error handling and appropriate HTTP status codes.
+- Used environment variables for configuration.
+- Tested API endpoints and debugged routing and module import issues.
 
 ### Future Improvements
 
-The current version focuses on basic CRUD functionality. Possible future upgrades include:
+- Add search and filtering for notes.
+- Implement authentication so users can manage their own notes.
+- Deploy the API and use a hosted MongoDB database.
 
-- **Search and Filtering:** Search notes by title and filter notes based on specific criteria.
-- **Pagination and Sorting:** Support large collections by returning notes in pages and sorting them.
-- **Authentication and Authorization:** Allow users to register, log in, and manage only their own notes.
-- **Improved Validation:** Add stricter input validation and consistent error responses.
-- **Additional Features:** Add categories, tags, or note pinning.
-- **Deployment:** Deploy the API and connect it to a hosted MongoDB database.
+These are potential extensions and are not part of the current implementation.
 
-These are potential future extensions and are not part of the current implementation.
+**Status:** Completed — core CRUD operations implemented and tested locally.
 
-**Status:** Completed — local CRUD operations implemented and tested.
+
+## Project 2 — URL Shortener API
+
+### Project Overview
+A REST API that converts long URLs into short links and redirects users to their original destinations. Built to practise backend CRUD operations, URL validation, and persistent database storage.
+
+### Tech Stack
+- Node.js
+- Express.js
+- MongoDB
+- Mongoose
+- dotenv
+
+### Features
+- Generate unique six-character short codes.
+- Create short URLs with HTTP/HTTPS validation.
+- Retrieve all URLs and individual URL details.
+- Redirect short URLs to their original destinations.
+- Delete URLs by short code.
+- Store URL records and creation timestamps in MongoDB.
+- Handle invalid input and missing URLs.
+
+### API Endpoints
+
+| Method | Endpoint | Description |
+|---|---|---|
+| POST | `/api/urls` | Create a short URL |
+| GET | `/api/urls` | Retrieve all URLs |
+| GET | `/api/urls/:code` | Retrieve URL details |
+| GET | `/:code` | Redirect to the original URL |
+| DELETE | `/api/urls/:code` | Delete a short URL |
+
+### Learning Outcomes
+- REST API design and Express routing.
+- Controller and model separation.
+- CRUD operations using Mongoose.
+- URL validation and short-code generation.
+- HTTP redirects and status codes.
+- Asynchronous database operations and error handling.
+
+### Future Improvements
+- Click tracking and basic URL analytics.
+- URL expiration and custom short aliases.
+- Deployment to make the API publicly accessible.
+
+### Status
+**Completed** — Core endpoints, MongoDB persistence, validation, redirects, and edge cases implemented and tested.
