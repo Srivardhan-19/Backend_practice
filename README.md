@@ -7,8 +7,8 @@ A collection of small backend projects built to strengthen my understanding of b
 | # | Project | Status |
 |---|---|---|
 | 1 | Notes API | Completed |
-| 2 | URL Shortener | Planned |
-| 3 | Authentication API | Planned |
+| 2 | URL Shortener | Completed |
+| 3 | Authentication API | Completed |
 | 4 | File Storage Service | Planned |
 | 5 | Booking System | Planned |
 | 6 | Real-Time Chat Backend | Planned |
