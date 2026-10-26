@@ -127,3 +127,51 @@ A REST API that converts long URLs into short links and redirects users to their
 
 ### Status
 **Completed** — Core endpoints, MongoDB persistence, validation, redirects, and edge cases implemented and tested.
+
+
+## Project 3 — Authentication API
+
+### Project Overview
+A REST API that supports user registration and login using password hashing and JSON Web Tokens (JWT) for authentication.
+
+### Tech Stack
+- Node.js
+- Express.js
+- MongoDB and Mongoose
+- bcryptjs
+- JSON Web Tokens (JWT)
+- dotenv
+
+### Features
+- User registration with required-field validation.
+- Password hashing using bcryptjs before storing credentials.
+- Duplicate email detection.
+- User login with credential verification.
+- JWT generation after successful login.
+- Authentication middleware for verifying JWTs.
+- Protected profile endpoint accessible with a valid token.
+- Error responses for missing or invalid authentication tokens.
+
+### API Endpoints
+
+| Method | Endpoint | Description | Access |
+|---|---|---|---|
+| POST | `/api/auth/` | Register a user | Public |
+| POST | `/api/auth/login` | Log in and receive a JWT | Public |
+| GET | `/api/auth/profile` | Test authenticated access | JWT required |
+
+### Learning Outcomes
+- Implementing authentication in an Express API.
+- Hashing and comparing passwords securely.
+- Generating and verifying JWTs.
+- Creating authentication middleware.
+- Protecting API routes using middleware.
+- Managing environment variables and database connections.
+
+### Future Improvements
+- Add role-based authorization and user-specific resources.
+- Add token refresh and logout functionality.
+- Deploy the API to a hosting platform.
+
+### Status
+Completed — core registration, login, JWT verification, and protected-route flows implemented and tested locally.
