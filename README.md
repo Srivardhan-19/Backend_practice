@@ -9,7 +9,7 @@ A collection of small backend projects built to strengthen my understanding of b
 | 1 | Notes API | Completed |
 | 2 | URL Shortener | Completed |
 | 3 | Authentication API | Completed |
-| 4 | File Storage Service | Planned |
+| 4 | File Storage Service | Completed |
 | 5 | Booking System | Planned |
 | 6 | Real-Time Chat Backend | Planned |
 
@@ -175,3 +175,54 @@ A REST API that supports user registration and login using password hashing and 
 
 ### Status
 Completed — core registration, login, JWT verification, and protected-route flows implemented and tested locally.
+
+## Project 4 — File Storage Service
+
+### Project Overview
+A RESTful API for uploading, storing, retrieving, downloading, and deleting files. File metadata is stored in MongoDB, while the actual files are stored locally using Multer.
+
+### Tech Stack
+- Node.js
+- Express.js
+- MongoDB
+- Mongoose
+- Multer
+- JavaScript (CommonJS)
+
+### Features
+- Upload PDF, JPG, and PNG files.
+- Maximum upload size of 5 MB.
+- Generate unique filenames for uploaded files.
+- Store file metadata in MongoDB.
+- Retrieve all uploaded files.
+- Retrieve file metadata by ID.
+- Download files using their IDs.
+- Delete files from local storage and MongoDB.
+- Validate file types, file sizes, and MongoDB IDs.
+- Handle missing files and upload errors.
+
+### API Endpoints
+
+| Method | Endpoint | Description |
+|---|---|---|
+| POST | `/api/files/upload` | Upload a file |
+| GET | `/api/files` | Retrieve all files |
+| GET | `/api/files/:id` | Retrieve file metadata |
+| GET | `/api/files/:id/download` | Download a file |
+| DELETE | `/api/files/:id` | Delete a file |
+
+### Learning Outcomes
+- File uploads and handling using Multer.
+- Working with Node.js `fs` and `path` modules.
+- Storing and retrieving file metadata using MongoDB and Mongoose.
+- Implementing file download and deletion.
+- Handling middleware errors and file validation.
+- Managing files across local storage and a database.
+
+### Future Improvements
+- Implement stronger file validation and authentication-based access control.
+- Integrate cloud storage for scalable file management.
+- Deploy the API to a cloud platform.
+
+### Status
+Completed — Core API functionality implemented and tested locally.
